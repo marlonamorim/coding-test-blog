@@ -6,7 +6,9 @@ Este projeto consiste na implementação de um sistema básico de blog onde os u
 
 ## Orientações Gerais
 
-- **Repositório**: Faça um fork desse repositório.
+- **Repositório**: Clique no botão Use this template (Usar este template) para criar uma cópia do repositório em sua própria conta do GitHub.
+    - Dê um nome ao seu repositório (sugerimos usar seu nome ou identificação para facilitar a identificação).
+    - ddd
 - **Envio**: Compartilhe apenas a URL do seu repo.
 - **Observações**: Preencha as instruções finais a este `Readme.md` deixando descrito, de forma objetiva, a estrutura do projeto, instruções de execução ao repo e observações finais caso exista.
 
