@@ -7,14 +7,14 @@ A primeira etapa do processo seletivo é um teste técnico, que está descrito a
 
 Este projeto consiste na implementação de um sistema básico de blog onde os usuários podem visualizar, criar, editar e excluir postagens. O objetivo é avaliar as habilidades técnicas em C# e o uso do Entity Framework para manipulação de dados.
 
-## Orientações Gerais
-
-- **Repositório**:
-    - Clique no botão Use this template (Usar este template) para criar uma cópia do repositório em sua própria conta do GitHub.
-    - Dê um nome ao seu repositório (sugerimos usar seu nome ou identificação para facilitar a identificação).
-- **Envio**: Compartilhe apenas a URL do seu repo.
-- **Observações**: Preencha as instruções finais a este `Readme.md` deixando descrito, de forma objetiva, a estrutura do projeto, instruções de execução ao repo e observações finais caso exista.
-
+## Requisitos para a entrega
+    1. Faça um fork deste repositório;
+    2. Realize o teste;
+    3. Adicione seu currículo em PDF na raiz do repositório;
+    4. Envie-nos o PULL-REQUEST para que seja avaliado.
+    
+    OBS: seus dados não ficarão públicos em nosso repositório.
+  
 ## Funcionalidades
 
 ### Requisitos Funcionais
@@ -43,16 +43,11 @@ Este projeto consiste na implementação de um sistema básico de blog onde os u
 
 - **Interface Web Simples**: Crie uma interface web simples para a interação com o sistema.
 
-## Estrutura do Projeto
-_A ser preenchido_
-
-## Como Executar o Projeto
-_A ser preenchido_
-
 ## Observações Finais
 Certifique-se de que seu código está bem documentado e limpo.
-Inclua qualquer documentação adicional que possa ajudar a entender sua solução (por exemplo, um arquivo NOTES.md).
+Inclua qualquer documentação adicional que possa ajudar a entender sua solução (README.md).
 
 ---
 
-Este teste prático é uma oportunidade para demonstrar suas habilidades em desenvolvimento C#, arquitetura de software e boas práticas de programação. Boa sorte!
+Este teste prático é uma oportunidade para demonstrar suas habilidades em desenvolvimento C#, arquitetura de software e boas práticas de programação. 
+Divirta-se no processo!
