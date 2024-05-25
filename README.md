@@ -2,6 +2,9 @@
 
 ## Descrição
 
+Agradecemos por estar participando do nosso processo seletivo! Estamos muito felizes em ter você por aqui 😃.
+A primeira etapa do processo seletivo é um teste técnico, que está descrito abaixo. Boa sorte! \o/
+
 Este projeto consiste na implementação de um sistema básico de blog onde os usuários podem visualizar, criar, editar e excluir postagens. O objetivo é avaliar as habilidades técnicas em C# e o uso do Entity Framework para manipulação de dados.
 
 ## Orientações Gerais
