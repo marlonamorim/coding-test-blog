@@ -1,4 +1,4 @@
-# Teste Prático C# - Projeto de Blog Simples
+# Coding Test Dotkon - Projeto de Blog Simples
 
 ## Descrição
 
