@@ -47,7 +47,8 @@ _A ser preenchido_
 _A ser preenchido_
 
 ## Observações Finais
-_A ser preenchido_
+Certifique-se de que seu código está bem documentado e limpo.
+Inclua qualquer documentação adicional que possa ajudar a entender sua solução (por exemplo, um arquivo NOTES.md).
 
 ---
 
