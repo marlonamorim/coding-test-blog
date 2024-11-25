@@ -30,7 +30,7 @@ Este projeto consiste na implementação de um sistema básico de blog onde os u
 
 ### Requisitos Técnicos
 
-- **.NET**: Utilize a versão 6 ou 8
+- **.NET**: Utilize a versão 7, 8 ou 9
 - **Entity Framework**: Utilize o Entity Framework para interagir com o banco de dados e armazenar informações sobre usuários e postagens.
 
 ### Requisitos Opcionais
