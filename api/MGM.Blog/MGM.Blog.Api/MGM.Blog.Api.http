@@ -1,0 +1,21 @@
+@MGM.Blog.Api_HostAddress = http://localhost:5046
+
+POST {{MGM.Blog.Api_HostAddress}}/api/user/
+Accept: application/json
+
+###
+
+GET {{MGM.Blog.Api_HostAddress}}/api/post/
+Accept: application/json
+
+###
+
+PATCH {{MGM.Blog.Api_HostAddress}}/api/post/
+Accept: application/json
+
+###
+
+DELETE {{MGM.Blog.Api_HostAddress}}/api/post/{id:int}
+Accept: application/json
+
+###
