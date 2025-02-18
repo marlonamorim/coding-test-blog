@@ -7,7 +7,7 @@ namespace MGM.Blog.AppServices.Services
     {
         Task CreateAsync(PostViewModel vm);
 
-        Task<IEnumerable<PostDto>> ListByUserAsync();
+        Task<IEnumerable<PostDto>> ListAsync();
 
         Task DeleteAsync(Guid id);
 

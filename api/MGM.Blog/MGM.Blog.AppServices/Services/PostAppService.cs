@@ -23,8 +23,8 @@ namespace MGM.Blog.AppServices.Services
         public async Task DeleteAsync(Guid id)
             => await service.DeleteAsync(id);
 
-        public async Task<IEnumerable<PostDto>> ListByUserAsync() =>
-            await service.ListByUserAsync();
+        public async Task<IEnumerable<PostDto>> ListAsync() =>
+            await service.ListAsync();
 
         public async Task UpdateAsync(PostViewModel vm)
         {

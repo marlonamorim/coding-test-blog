@@ -18,7 +18,7 @@ namespace MGM.Blog.Api.Controllers
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(List<PostViewModel>))]
         [SwaggerResponse(StatusCodes.Status401Unauthorized, Type = typeof(UnauthorizedResult))]
         public async Task<IActionResult> ListAllByUserAsync()
-            => Ok(await postAppService.ListByUserAsync());
+            => Ok(await postAppService.ListAsync());
 
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Bearer")]

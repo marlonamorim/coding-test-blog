@@ -6,7 +6,9 @@ namespace MGM.Blog.Domain.Repositories
     {
         Task CreateAsync(Post entity);
 
-        Task<IEnumerable<Post>> ListByUserIdAsync(Guid userId);
+        Task<IEnumerable<Post>> ListAsync();
+
+        Task<IEnumerable<Post>> ListNewsAsync(DateTime referenceDate);
 
         Task<Post?> GetByIdAsync(Guid id);
 

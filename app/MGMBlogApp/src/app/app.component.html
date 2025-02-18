@@ -1,0 +1,89 @@
+<h1 class="title animated jackInTheBox">{{title}}</h1>
+
+<simple-notifications [options]="options"></simple-notifications>
+
+<h3 *ngIf="userLogged">Usuário logado: {{userLogin}}</h3>
+<ul class="animated flipInX" *ngIf="mode=='list'">
+  <li *ngFor="let post of posts">{{post.text}} {{post.title}}
+    <button (click)="edit(post)">
+      <i class="fa fa-edit"></i>
+    </button>
+    <button (click)="remove(post)">
+      <i class="far fa-trash-alt"></i>
+    </button>
+  </li>
+</ul>
+
+<div id="modal" *ngIf="mode=='add'" class="animated flipInX">
+  <form [formGroup]="form">
+    <label>Login: </label>
+    <input type="text" placeholder="Insira o seu e-mail" maxlength="100" formControlName="login">
+    <small class="danger" *ngIf="form.controls.login.invalid && !form.controls.login.pristine">Este campo deve conter
+      entre 3 e 100
+      caracteres</small><br><br>
+    <label>Senha: </label>
+    <input type="password" placeholder="Insira sua senha" maxlength="20" formControlName="password">
+    <small class="danger" *ngIf="form.controls.password.invalid && !form.controls.password.pristine">Este campo deve
+      conter entre 3 e 20
+      caracteres</small><br><br>
+    <button class="button" (click)="login()">
+      <i class="fa fa-sign-in"></i>
+      Login
+    </button><br><br>
+    <label>Título: </label>
+    <input type="text" placeholder="Adicione um título" maxlength="60" formControlName="title">
+    <small class="danger" *ngIf="form.controls.title.invalid && !form.controls.title.pristine">Este campo deve conter
+      entre 3 e 60
+      caracteres</small><br>
+    <br>
+    <label>Post: </label>
+    <input type="text" placeholder="Adicione um texto" maxlength="2000" formControlName="post">
+    <small class="danger" *ngIf="form.controls.post.invalid && !form.controls.post.pristine">Este campo deve conter
+      entre 10 e 2000
+      caracteres</small><br><br>
+    <button class="button"
+      [disabled]="(form.invalid && !userLogged) || form.controls.title.invalid || form.controls.post.invalid"
+      (click)="add()">
+      <i class="far fa-save"></i>
+      Salvar
+    </button>
+  </form>
+</div>
+
+<div id="modal" *ngIf="mode=='edit'" class="animated flipInX">
+  <form [formGroup]="form">
+    <label>Título: </label>
+    <input type="text" placeholder="Adicione um título" maxlength="60" [(ngModel)]="form.controls.title.value"
+      formControlName="title">
+    <small class="danger" *ngIf="form.controls.title.invalid && !form.controls.title.pristine">Este campo deve conter
+      entre 3 e 60
+      caracteres</small><br>
+    <br>
+    <label>Post: </label>
+    <input type="text" placeholder="Adicione um texto" maxlength="2000" [(ngModel)]="form.controls.post.value"
+      formControlName="post">
+    <small class="danger" *ngIf="form.controls.post.invalid && !form.controls.post.pristine">Este campo deve conter
+      entre 10 e 2000
+      caracteres</small><br><br>
+    <button class="button" (click)="saveEdit(form.controls.id.value)">
+      <i class="far fa-save"></i>
+      Salvar
+    </button>&nbsp;
+    <button class="button" (click)="changeMode('list')">
+      <i class="fas fa-times"></i>
+      Cancelar
+    </button>
+  </form>
+</div>
+
+<button class="add-button animated fadeInUp button" (click)="changeMode('add')" *ngIf="mode=='list'">
+  <i class="fas fa-plus-circle"></i>
+  Nova postagem
+</button>
+
+<button class="add-button animated fadeInUp button" (click)="changeMode('list')" *ngIf="mode=='add'">
+  <i class="fas fa-times"></i>
+  Cancelar
+</button>
+
+<router-outlet></router-outlet>

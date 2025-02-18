@@ -6,7 +6,9 @@ namespace MGM.Blog.Domain.Services
     {
         Task CreateAsync(PostDto dto);
 
-        Task<IEnumerable<PostDto>> ListByUserAsync();
+        Task<IEnumerable<PostDto>> ListAsync();
+
+        Task<IEnumerable<PostDto>> ListNewsAsync(DateTime referenceDate);
 
         Task DeleteAsync(Guid id);
 

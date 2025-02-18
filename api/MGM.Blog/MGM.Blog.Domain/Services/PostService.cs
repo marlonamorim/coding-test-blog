@@ -12,12 +12,17 @@ namespace MGM.Blog.Domain.Services
         public async Task DeleteAsync(Guid id)
             => await repository.DeleteAsync(id);
 
-        public async Task<IEnumerable<PostDto>> ListByUserAsync()
+        public async Task<IEnumerable<PostDto>> ListAsync()
         {
-            var rawUserId = contextAccessorService.GetUserId();
-            Guid.TryParse(rawUserId, out Guid userId);
-            
-            var posts = await repository.ListByUserIdAsync(userId);
+            var posts = await repository.ListAsync();
+            return posts
+                .OrderByDescending(x => x.Created)
+                .ToCollectionPostDto();
+        }
+
+        public async Task<IEnumerable<PostDto>> ListNewsAsync(DateTime referenceDate)
+        {
+            var posts = await repository.ListNewsAsync(referenceDate);
             return posts
                 .OrderByDescending(x => x.Created)
                 .ToCollectionPostDto();

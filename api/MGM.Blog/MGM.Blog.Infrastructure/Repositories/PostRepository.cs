@@ -23,8 +23,11 @@ namespace MGM.Blog.Infrastructure.Repositories
             }
         }
 
-        public async Task<IEnumerable<Post>> ListByUserIdAsync(Guid userId)
-            => await blogDbContext.Posts.Where(x => x.UserId.Equals(userId)).ToListAsync();
+        public async Task<IEnumerable<Post>> ListAsync()
+            => await blogDbContext.Posts.ToListAsync();
+
+        public async Task<IEnumerable<Post>> ListNewsAsync(DateTime referenceDate)
+            => await blogDbContext.Posts.Where(x => x.Created.UtcDateTime >= referenceDate).ToListAsync();
 
         public async Task<Post?> GetByIdAsync(Guid id)
             => await blogDbContext.Posts.FirstOrDefaultAsync(x => x.Id.Equals(id));

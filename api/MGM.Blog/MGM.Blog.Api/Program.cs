@@ -111,6 +111,8 @@ builder.Services.AddRepositories(builder.Configuration);
 builder.Services.AddDomainServices();
 builder.Services.AddAppServices();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 app.UseWebSockets();
 
@@ -128,5 +130,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(builder => builder
+     .AllowAnyOrigin()
+     .AllowAnyMethod()
+     .AllowAnyHeader());
 
 await app.RunAsync();
